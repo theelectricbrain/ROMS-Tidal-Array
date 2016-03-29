@@ -1,9 +1,9 @@
 ROMS-Tidal-Array
 ================
 ###Warnings###
-This project is under development and subject to changes.
-It is a beta version and still suffers multiple bugs.
-It has been developed around an old version of ROMS (i.e. 3.6).
+* This project is under development and subject to changes.
+* It is a beta version and still suffers multiple bugs.
+* It has been developed around an old version of ROMS (i.e. 3.6).
 
 
 ### Project description ###
@@ -25,7 +25,7 @@ It has been developed around an old version of ROMS (i.e. 3.6).
   salt – various turbulence closure sub-models are available for turbulent mixing. Note 
   that ROMS version 3.6 is used in the current distribution of ROMS-Tidal Array.
 
-Module Description:
+#### Module Description:
 ##### CPP Options
 Three new CPP options have been added to the code and work as follows:
 * TIDAL_TURBINE: switches on the tidal array computation. Note that the positions and
@@ -62,29 +62,16 @@ functionality. The input file (see “turbine_validation.in” in ROMS-Tidal-Arr
 * “Lturbines” is a list of Boolean values (i.e. “T” or “F”) of “Ngrids” (i.e. number of nested and/or connected grid) element which switches the computation of turbine effects within nested and/or multiple connected grids. “T” would switch it on, “F” would switch it off.
 * “NTURBINES” is a list of integer values of “Ngrids” (i.e. number of nested and/or connected grid) element which defines the number of turbines to account within nested and/or multiple connected grids.
 * “POS” is composed of multiple lists, one of each turbine composing the array and one list per line. Each list/line is composed of 1 integer value (i.e. G) and 9 float values (i.e. xpos, ypos, zpos, Ct, Ctke, Cgls, Lc, Pa and Diam) defining the following turbines charcteristics:
-- “G”: Nested grid number
-- “xpos”: turbine x coordinate (in meters)
-- “ypos”: turbine y coordinate (in meters)
-- “zpos”: turbine z coordinate in depth ratio (i.e. hub height divided by water-column depth)
-- “Ct”: thrust coefficient
-- “Ctke”: Turbulent Kinetic Energy (TKE) correction parameter
-- “Cgls”: Generic Length Scale (GLS) correction parameter
-- “Lc”: blade chord length (m)
-- “Pa”: pitch angle (radians)
-- “Diam”: Turbine rotor diameter (m)
-
-##### Output File
-s, Ct, Ctke, Cgls, Lc, Pa and Diam) defining the following turbines charcteristics:
-* “G”: Nested grid number
-* “xpos”: turbine x coordinate (in meters)
-* “ypos”: turbine y coordinate (in meters)
-* “zpos”: turbine z coordinate in depth ratio (i.e. hub height divided by water-column depth)
-* “Ct”: thrust coefficient
-* “Ctke”: Turbulent Kinetic Energy (TKE) correction parameter
-* “Cgls”: Generic Length Scale (GLS) correction parameter
-* “Lc”: blade chord length (m)
-* “Pa”: pitch angle (radians)
-* “Diam”: Turbine rotor diameter (m)
+..- “G”: Nested grid number
+..- “xpos”: turbine x coordinate (in meters)
+..- “ypos”: turbine y coordinate (in meters)
+..- “zpos”: turbine z coordinate in depth ratio (i.e. hub height divided by water-column depth)
+..- “Ct”: thrust coefficient
+..- “Ctke”: Turbulent Kinetic Energy (TKE) correction parameter
+..- “Cgls”: Generic Length Scale (GLS) correction parameter
+..- “Lc”: blade chord length (m)
+..- “Pa”: pitch angle (radians)
+..- “Diam”: Turbine rotor diameter (m)
 
 ##### Output File
 4 new fields have been added to the history output file which can be described as follows:
@@ -100,6 +87,7 @@ Version 0.9 of ROMS-Tidal Array has several known limitations:
 * The current distribution is based on old version of ROMS and may therefore have possible compatibility problems with newer version of ROMS
 * At this stage of development, modelled turbines work both ways with fixed directions and positions conditioned by the model grid.
 * The formulations and coefficients of the turbine related terms are partially based on empirical tuning with publicly available database and therefore may require custom modifications as well as further improvements as validation data becomes more and more available.
+
 ### Best practises:
 The following recommendations will help enjoying the ROMS-Tidal Array experience to the fullest. The learning curve is steep but worthwhile.
 * First of all, join the [ROMS/TOMS group](https://www.myroms.org/index.php?page=login). Their community forum will quickly become your best ally when inevitably battling with unknown error messages. Do not forget to acknowledge their amazing work when [disseminating your work](https://www.myroms.org/index.php?page=License_ROMS) and try as much as possible to actively participate to the community effort.
