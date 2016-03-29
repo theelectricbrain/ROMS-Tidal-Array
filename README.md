@@ -62,16 +62,16 @@ functionality. The input file (see “turbine_validation.in” in ROMS-Tidal-Arr
 * “Lturbines” is a list of Boolean values (i.e. “T” or “F”) of “Ngrids” (i.e. number of nested and/or connected grid) element which switches the computation of turbine effects within nested and/or multiple connected grids. “T” would switch it on, “F” would switch it off.
 * “NTURBINES” is a list of integer values of “Ngrids” (i.e. number of nested and/or connected grid) element which defines the number of turbines to account within nested and/or multiple connected grids.
 * “POS” is composed of multiple lists, one of each turbine composing the array and one list per line. Each list/line is composed of 1 integer value (i.e. G) and 9 float values (i.e. xpos, ypos, zpos, Ct, Ctke, Cgls, Lc, Pa and Diam) defining the following turbines charcteristics:
-..- “G”: Nested grid number
-..- “xpos”: turbine x coordinate (in meters)
-..- “ypos”: turbine y coordinate (in meters)
-..- “zpos”: turbine z coordinate in depth ratio (i.e. hub height divided by water-column depth)
-..- “Ct”: thrust coefficient
-..- “Ctke”: Turbulent Kinetic Energy (TKE) correction parameter
-..- “Cgls”: Generic Length Scale (GLS) correction parameter
-..- “Lc”: blade chord length (m)
-..- “Pa”: pitch angle (radians)
-..- “Diam”: Turbine rotor diameter (m)
+  - “G”: Nested grid number
+  - “xpos”: turbine x coordinate (in meters)
+  - “ypos”: turbine y coordinate (in meters)
+  - “zpos”: turbine z coordinate in depth ratio (i.e. hub height divided by water-column depth)
+  - “Ct”: thrust coefficient
+  - “Ctke”: Turbulent Kinetic Energy (TKE) correction parameter
+  - “Cgls”: Generic Length Scale (GLS) correction parameter
+  - “Lc”: blade chord length (m)
+  - “Pa”: pitch angle (radians)
+  - “Diam”: Turbine rotor diameter (m)
 
 ##### Output File
 4 new fields have been added to the history output file which can be described as follows:
