@@ -1,12 +1,13 @@
 ROMS-Tidal-Array
 ================
 ###Warnings###
-####This project is under development and subject to changes####
-####It is a beta version and still suffers multiple bugs####
-####It has been developed around an old version of ROMS (i.e. 3.6)####
+This project is under development and subject to changes.
+It is a beta version and still suffers multiple bugs.
+It has been developed around an old version of ROMS (i.e. 3.6).
+
 
 ### Project description ###
-Background:
+#### Background:
 * The tidal array representation method implemented in this modelling tool is based on a
   tidal turbine parameterisation method, accounting for the momentum capture as well as
   the sub-grid scale turbulence balance perturbations for each individual device.
@@ -46,7 +47,7 @@ functionality. The input file (see “turbine_validation.in” in ROMS-Tidal-Arr
   salt – various turbulence closure sub-models are available for turbulent mixing. Note 
   that ROMS version 3.6 is used in the current distribution of ROMS-Tidal Array.
 
-Module Description:
+#### Module Description:
 ##### CPP Options
 Three new CPP options have been added to the code and work as follows:
 * TIDAL_TURBINE: switches on the tidal array computation. Note that the positions and
@@ -61,34 +62,36 @@ functionality. The input file (see “turbine_validation.in” in ROMS-Tidal-Arr
 * “Lturbines” is a list of Boolean values (i.e. “T” or “F”) of “Ngrids” (i.e. number of nested and/or connected grid) element which switches the computation of turbine effects within nested and/or multiple connected grids. “T” would switch it on, “F” would switch it off.
 * “NTURBINES” is a list of integer values of “Ngrids” (i.e. number of nested and/or connected grid) element which defines the number of turbines to account within nested and/or multiple connected grids.
 * “POS” is composed of multiple lists, one of each turbine composing the array and one list per line. Each list/line is composed of 1 integer value (i.e. G) and 9 float values (i.e. xpos, ypos, zpos, Ct, Ctke, Cgls, Lc, Pa and Diam) defining the following turbines charcteristics:
-** “G”: Nested grid number
-** “xpos”: turbine x coordinate (in meters)
-** “ypos”: turbine y coordinate (in meters)
-** “zpos”: turbine z coordinate in depth ratio (i.e. hub height divided by water-column depth)
-** “Ct”: thrust coefficient
-** “Ctke”: Turbulent Kinetic Energy (TKE) correction parameter
-** “Cgls”: Generic Length Scale (GLS) correction parameter
-** “Lc”: blade chord length (m)
-** “Pa”: pitch angle (radians)
-** “Diam”: Turbine rotor diameter (m)
+- “G”: Nested grid number
+- “xpos”: turbine x coordinate (in meters)
+- “ypos”: turbine y coordinate (in meters)
+- “zpos”: turbine z coordinate in depth ratio (i.e. hub height divided by water-column depth)
+- “Ct”: thrust coefficient
+- “Ctke”: Turbulent Kinetic Energy (TKE) correction parameter
+- “Cgls”: Generic Length Scale (GLS) correction parameter
+- “Lc”: blade chord length (m)
+- “Pa”: pitch angle (radians)
+- “Diam”: Turbine rotor diameter (m)
+
 ##### Output File
 s, Ct, Ctke, Cgls, Lc, Pa and Diam) defining the following turbines charcteristics:
-** “G”: Nested grid number
-** “xpos”: turbine x coordinate (in meters)
-** “ypos”: turbine y coordinate (in meters)
-** “zpos”: turbine z coordinate in depth ratio (i.e. hub height divided by water-column depth)
-** “Ct”: thrust coefficient
-** “Ctke”: Turbulent Kinetic Energy (TKE) correction parameter
-** “Cgls”: Generic Length Scale (GLS) correction parameter
-** “Lc”: blade chord length (m)
-** “Pa”: pitch angle (radians)
-** “Diam”: Turbine rotor diameter (m)
+* “G”: Nested grid number
+* “xpos”: turbine x coordinate (in meters)
+* “ypos”: turbine y coordinate (in meters)
+* “zpos”: turbine z coordinate in depth ratio (i.e. hub height divided by water-column depth)
+* “Ct”: thrust coefficient
+* “Ctke”: Turbulent Kinetic Energy (TKE) correction parameter
+* “Cgls”: Generic Length Scale (GLS) correction parameter
+* “Lc”: blade chord length (m)
+* “Pa”: pitch angle (radians)
+* “Diam”: Turbine rotor diameter (m)
+
 ##### Output File
 4 new fields have been added to the history output file which can be described as follows:
-** “Dragfrc”: turbine induced momentum sink (m4.s-2)
-** “Dragpwr”: turbine induced power sink (m5.s-3)
-** “Dragtke”: turbine induced TKE correction (m2.s-2)
-** “Draggls”: turbine induced GLS correction (m3.s-2)
+* “Dragfrc”: turbine induced momentum sink (m4.s-2)
+* “Dragpwr”: turbine induced power sink (m5.s-3)
+* “Dragtke”: turbine induced TKE correction (m2.s-2)
+* “Draggls”: turbine induced GLS correction (m3.s-2)
 Note that the tidal array module is compatible with the ROMS distributed-memory parallelism using OpenMPI libraries, besides the turbulence correction implementation is compatible with all the variations permitted by the GLS closure model (i.e. k-kl, k-ε, k-ω and k-generic).
 
 ### Version limitations:
@@ -106,13 +109,14 @@ The following recommendations will help enjoying the ROMS-Tidal Array experience
 
 ### References ###
 1. Roc et al. 2013. "Methodology for tidal turbine representation in ocean circulation". Renewable Energy, Volume 51, pg. 448-464
-". Roc et al. 2014: "Tidal turbine representation in an ocean circulation model: Towards realistc applications". Ocean Engineering, Volume 78, pg. 95-111
+2. Roc et al. 2014: "Tidal turbine representation in an ocean circulation model: Towards realistc applications". Ocean Engineering, Volume 78, pg. 95-111
 
 ### Acknowledgement ###
 * ROMS/TOMS group  for their amazing work on the ROMS model (see www.myroms.org)
 * IT Power Consulting Ltd for supporting and financing this project (see www.itpower.co.uk)
 * Electric Brain for administrating and mainting this repository/group ( see electricbrain.fr)
 * Special acknowledgement for the contributions of [Alice Jane Goward Brown](https://www.bangor.ac.uk/oceansciences/staff/phd-students/alice-goward-brown) and [Elizabeth Brasseale](http://www.ocean.washington.edu/home/Elizabeth+Brasseale)
+
 ### Legal Information ###
 * ROMS core code: Copyright (c) 2002-2016 The ROMS/TOMS Group, MIT/X License (See http://www.opensource.org/licenses/mit-license.php)
 * ROMS tidal array module: Copyright (c) 2016 Thomas Roc and ITPower, Licensed under an Affero GPL style license v3.0 (see License_ROMS-Tidal Array.txt)
