@@ -1,0 +1,553 @@
+
+ Model Input Parameters:  ROMS/TOMS version 3.7  
+                          Monday - September 8, 2014 -  9:16:09 AM
+ -----------------------------------------------------------------------------
+
+ Simplified Channel
+
+ Operating system : Linux
+ CPU/hardware     : x86_64
+ Compiler system  : gfortran
+ Compiler command : /usr/bin/mpif90
+ Compiler flags   : -frepack-arrays -O3 -ffast-math -ffree-form -ffree-line-length-none -ffree-form -ffree-line-length-none -ffree-form -ffree-line-length-none
+
+ Input Script  : 
+
+ SVN Root URL  : https://www.myroms.org/svn/src/trunk
+ SVN Revision  : 737M
+
+ Local Root    : /home/thomas/Desktop/ROMS_latest_patched
+ Header Dir    : /home/thomas/Desktop/ROMS_latest_patched/cases
+ Header file   : validation.h
+ Analytical Dir: /home/thomas/Desktop/ROMS_latest_patched/cases/Functionals
+
+ Resolution, Grid 01: 0420x0091x040,  Parallel Nodes:  24,  Tiling: 008x003
+
+
+ Physical Parameters, Grid: 01
+ =============================
+
+      41000  ntimes            Number of timesteps for 3-D equations.
+      0.010  dt                Timestep size (s) for 3-D equations.
+         30  ndtfast           Number of timesteps for 2-D equations between
+                                 each 3D timestep.
+          1  ERstr             Starting ensemble/perturbation run number.
+          1  ERend             Ending ensemble/perturbation run number.
+         -1  nrrec             Number of restart records to read from disk.
+          T  LcycleRST         Switch to recycle time-records in restart file.
+          0  nRST              Number of timesteps between the writing of data
+                                 into restart fields.
+       2000  ninfo             Number of timesteps between print of information
+                                 to standard output.
+          T  ldefout           Switch to create a new output NetCDF file(s).
+      41000  nHIS              Number of timesteps between the writing fields
+                                 into history file.
+          0  ntsAVG            Starting timestep for the accumulation of output
+                                 time-averaged data.
+          0  nAVG              Number of timesteps between the writing of
+                                 time-averaged data into averages file.
+ 5.0000E-04  nl_visc2          NLM Horizontal, harmonic mixing coefficient
+                                 (m2/s) for momentum.
+          F  LuvSponge         Turning OFF sponge on horizontal momentum.
+          F  LtracerSponge(01) Turning OFF sponge on tracer 01: temp
+          F  LtracerSponge(02) Turning OFF sponge on tracer 02: salt
+ 1.0000E-06  Akt_bak(01)       Background vertical mixing coefficient (m2/s)
+                                 for tracer 01: temp
+ 1.0000E-06  Akt_bak(02)       Background vertical mixing coefficient (m2/s)
+                                 for tracer 02: salt
+ 1.0000E-05  Akv_bak           Background vertical mixing coefficient (m2/s)
+                                 for momentum.
+ 5.0000E-06  Akk_bak           Background vertical mixing coefficient (m2/s)
+                                 for turbulent energy.
+ 5.0000E-06  Akp_bak           Background vertical mixing coefficient (m2/s)
+                                 for turbulent generic statistical field.
+      3.000  gls_p             GLS stability exponent.
+      1.500  gls_m             GLS turbulent kinetic energy exponent.
+     -1.000  gls_n             GLS turbulent length scale exponent.
+ 3.0000E-06  gls_Kmin          GLS minimum value of turbulent kinetic energy.
+ 1.0000E-12  gls_Pmin          GLS minimum value of dissipation.
+ 5.4770E-01  gls_cmu0          GLS stability coefficient.
+ 1.4400E+00  gls_c1            GLS shear production coefficient.
+ 1.9200E+00  gls_c2            GLS dissipation coefficient.
+-4.0000E-01  gls_c3m           GLS stable buoyancy production coefficient.
+ 1.0000E+00  gls_c3p           GLS unstable buoyancy production coefficient.
+ 1.0000E+00  gls_sigk          GLS constant Schmidt number for TKE.
+ 1.3000E+00  gls_sigp          GLS constant Schmidt number for PSI.
+   1400.000  charnok_alpha     Charnok factor for Zos calculation.
+      0.500  zos_hsig_alpha    Factor for Zos calculation using Hsig(Awave).
+      0.250  sz_alpha          Factor for Wave dissipation surface tke flux .
+    100.000  crgban_cw         Factor for Craig/Banner surface tke flux.
+ 0.0000E+00  rdrg              Linear bottom drag coefficient (m/s).
+ 0.0000E+00  rdrg2             Quadratic bottom drag coefficient.
+ 1.0000E-07  Zob               Bottom roughness (m).
+ 0.0000E+00  Zos               Surface roughness (m).
+          2  Vtransform        S-coordinate transformation equation.
+          3  Vstretching       S-coordinate stretching function.
+ 7.0000E-01  theta_s           S-coordinate surface control parameter.
+ 7.0000E-01  theta_b           S-coordinate bottom  control parameter.
+      0.000  Tcline            S-coordinate surface/bottom layer width (m) used
+                                 in vertical coordinate stretching.
+   1025.000  rho0              Mean density (kg/m3) for Boussinesq approximation.
+      0.000  dstart            Time-stamp assigned to model initialization (days).
+       0.00  time_ref          Reference time for units attribute (yyyymmdd.dd)
+ 0.0000E+00  Tnudg(01)         Nudging/relaxation time scale (days)
+                                 for tracer 01: temp
+ 0.0000E+00  Tnudg(02)         Nudging/relaxation time scale (days)
+                                 for tracer 02: salt
+ 1.0000E-03  Znudg             Nudging/relaxation time scale (days)
+                                 for free-surface.
+ 1.0000E-03  M2nudg            Nudging/relaxation time scale (days)
+                                 for 2D momentum.
+ 1.0000E-03  M3nudg            Nudging/relaxation time scale (days)
+                                 for 3D momentum.
+ 5.0000E+00  obcfac            Factor between passive and active
+                                 open boundary conditions.
+          F  VolCons(1)        NLM western  edge boundary volume conservation.
+          F  VolCons(2)        NLM southern edge boundary volume conservation.
+          F  VolCons(3)        NLM eastern  edge boundary volume conservation.
+          F  VolCons(4)        NLM northern edge boundary volume conservation.
+     20.000  T0                Background potential temperature (C) constant.
+     35.000  S0                Background salinity (PSU) constant.
+   1025.000  R0                Background density (kg/m3) used in linear Equation
+                                 of State.
+ 1.7000E-04  Tcoef             Thermal expansion coefficient (1/Celsius).
+ 7.6000E-04  Scoef             Saline contraction coefficient (1/PSU).
+     -1.000  gamma2            Slipperiness variable: free-slip (1.0) or 
+                                                      no-slip (-1.0).
+          F  LuvSrc            Turning OFF momentum point Sources/Sinks.
+          F  LwSrc             Turning OFF volume influx point Sources/Sinks.
+          F  LtracerSrc(01)    Turning OFF point Sources/Sinks on tracer 01: temp
+          F  LtracerSrc(02)    Turning OFF point Sources/Sinks on tracer 02: salt
+          F  LsshCLM           Turning OFF processing of SSH climatology.
+          F  Lm2CLM            Turning OFF processing of 2D momentum climatology.
+          F  Lm3CLM            Turning OFF processing of 3D momentum climatology.
+          F  LtracerCLM(01)    Turning OFF processing of climatology tracer 01: temp
+          F  LtracerCLM(02)    Turning OFF processing of climatology tracer 02: salt
+          F  LnudgeM2CLM       Turning OFF nudging of 2D momentum climatology.
+          F  LnudgeM3CLM       Turning OFF nudging of 3D momentum climatology.
+          F  LnudgeTCLM(01)    Turning OFF nudging of climatology tracer 01: temp
+          F  LnudgeTCLM(02)    Turning OFF nudging of climatology tracer 02: salt
+          T  Hout(idFsur)      Write out free-surface.
+          T  Hout(idUbar)      Write out 2D U-momentum component.
+          T  Hout(idVbar)      Write out 2D V-momentum component.
+          T  Hout(idUvel)      Write out 3D U-momentum component.
+          T  Hout(idVvel)      Write out 3D V-momentum component.
+          T  Hout(idWvel)      Write out W-momentum component.
+          T  Hout(idVvis)      Write out vertical viscosity: AKv.
+          T  Hout(idMtke)      Write out turbulent kinetic energy.
+          T  Hout(idMtls)      Write out turbulent generic length-scale.
+
+          T  Aout(idFsur)      Write out averaged free-surface.
+          T  Aout(idUbar)      Write out averaged 2D U-momentum component.
+          T  Aout(idVbar)      Write out averaged 2D V-momentum component.
+          T  Aout(idUvel)      Write out averaged 3D U-momentum component.
+          T  Aout(idVvel)      Write out averaged 3D V-momentum component.
+          T  Aout(idWvel)      Write out averaged W-momentum component.
+
+ Output/Input Files:
+
+             Output Restart File:  ocean_validation_rst.nc
+             Output History File:  ocean_validation_his.nc
+            Output Averages File:  ocean_validation_avg.nc
+    Tidal Turbine File:  turbine_validation.in
+
+ Tile partition information for Grid 01:  0420x0091x0040  tiling: 008x003
+
+     tile     Istr     Iend     Jstr     Jend     Npts
+
+        0        1       51        1       30    61200
+        1       52      104        1       30    63600
+        2      105      157        1       30    63600
+        3      158      210        1       30    63600
+        4      211      263        1       30    63600
+        5      264      316        1       30    63600
+        6      317      369        1       30    63600
+        7      370      420        1       30    61200
+        8        1       51       31       61    63240
+        9       52      104       31       61    65720
+       10      105      157       31       61    65720
+       11      158      210       31       61    65720
+       12      211      263       31       61    65720
+       13      264      316       31       61    65720
+       14      317      369       31       61    65720
+       15      370      420       31       61    63240
+       16        1       51       62       91    61200
+       17       52      104       62       91    63600
+       18      105      157       62       91    63600
+       19      158      210       62       91    63600
+       20      211      263       62       91    63600
+       21      264      316       62       91    63600
+       22      317      369       62       91    63600
+       23      370      420       62       91    61200
+
+ Tile minimum and maximum fractional coordinates for Grid 01:
+   (interior points only)
+
+     tile     Xmin     Xmax     Ymin     Ymax     grid
+
+        0     0.50    51.50     0.50    30.50  RHO-points
+        1    51.50   104.50     0.50    30.50  RHO-points
+        2   104.50   157.50     0.50    30.50  RHO-points
+        3   157.50   210.50     0.50    30.50  RHO-points
+        4   210.50   263.50     0.50    30.50  RHO-points
+        5   263.50   316.50     0.50    30.50  RHO-points
+        6   316.50   369.50     0.50    30.50  RHO-points
+        7   369.50   420.50     0.50    30.50  RHO-points
+        8     0.50    51.50    30.50    61.50  RHO-points
+        9    51.50   104.50    30.50    61.50  RHO-points
+       10   104.50   157.50    30.50    61.50  RHO-points
+       11   157.50   210.50    30.50    61.50  RHO-points
+       12   210.50   263.50    30.50    61.50  RHO-points
+       13   263.50   316.50    30.50    61.50  RHO-points
+       14   316.50   369.50    30.50    61.50  RHO-points
+       15   369.50   420.50    30.50    61.50  RHO-points
+       16     0.50    51.50    61.50    91.50  RHO-points
+       17    51.50   104.50    61.50    91.50  RHO-points
+       18   104.50   157.50    61.50    91.50  RHO-points
+       19   157.50   210.50    61.50    91.50  RHO-points
+       20   210.50   263.50    61.50    91.50  RHO-points
+       21   263.50   316.50    61.50    91.50  RHO-points
+       22   316.50   369.50    61.50    91.50  RHO-points
+       23   369.50   420.50    61.50    91.50  RHO-points
+
+        0     1.00    51.50     0.50    30.50    U-points
+        1    51.50   104.50     0.50    30.50    U-points
+        2   104.50   157.50     0.50    30.50    U-points
+        3   157.50   210.50     0.50    30.50    U-points
+        4   210.50   263.50     0.50    30.50    U-points
+        5   263.50   316.50     0.50    30.50    U-points
+        6   316.50   369.50     0.50    30.50    U-points
+        7   369.50   420.00     0.50    30.50    U-points
+        8     1.00    51.50    30.50    61.50    U-points
+        9    51.50   104.50    30.50    61.50    U-points
+       10   104.50   157.50    30.50    61.50    U-points
+       11   157.50   210.50    30.50    61.50    U-points
+       12   210.50   263.50    30.50    61.50    U-points
+       13   263.50   316.50    30.50    61.50    U-points
+       14   316.50   369.50    30.50    61.50    U-points
+       15   369.50   420.00    30.50    61.50    U-points
+       16     1.00    51.50    61.50    91.50    U-points
+       17    51.50   104.50    61.50    91.50    U-points
+       18   104.50   157.50    61.50    91.50    U-points
+       19   157.50   210.50    61.50    91.50    U-points
+       20   210.50   263.50    61.50    91.50    U-points
+       21   263.50   316.50    61.50    91.50    U-points
+       22   316.50   369.50    61.50    91.50    U-points
+       23   369.50   420.00    61.50    91.50    U-points
+
+        0     0.50    51.50     1.00    30.50    V-points
+        1    51.50   104.50     1.00    30.50    V-points
+        2   104.50   157.50     1.00    30.50    V-points
+        3   157.50   210.50     1.00    30.50    V-points
+        4   210.50   263.50     1.00    30.50    V-points
+        5   263.50   316.50     1.00    30.50    V-points
+        6   316.50   369.50     1.00    30.50    V-points
+        7   369.50   420.50     1.00    30.50    V-points
+        8     0.50    51.50    30.50    61.50    V-points
+        9    51.50   104.50    30.50    61.50    V-points
+       10   104.50   157.50    30.50    61.50    V-points
+       11   157.50   210.50    30.50    61.50    V-points
+       12   210.50   263.50    30.50    61.50    V-points
+       13   263.50   316.50    30.50    61.50    V-points
+       14   316.50   369.50    30.50    61.50    V-points
+       15   369.50   420.50    30.50    61.50    V-points
+       16     0.50    51.50    61.50    91.00    V-points
+       17    51.50   104.50    61.50    91.00    V-points
+       18   104.50   157.50    61.50    91.00    V-points
+       19   157.50   210.50    61.50    91.00    V-points
+       20   210.50   263.50    61.50    91.00    V-points
+       21   263.50   316.50    61.50    91.00    V-points
+       22   316.50   369.50    61.50    91.00    V-points
+       23   369.50   420.50    61.50    91.00    V-points
+
+ Maximum halo size in XI and ETA directions:
+
+               HaloSizeI(1) =     130
+               HaloSizeJ(1) =      86
+                TileSide(1) =      59
+                TileSize(1) =    2183
+
+
+   3  Number of turbines deployed.
+
+
+ Turbines Parameters, Grid: 01
+ =============================
+
+              xpos     ypos    zpos   Ct   Ctke   Cgls   Lc   Pa   Diam
+
+
+No  1 : 0.401D+01 0.549D+00  0.50  0.92  0.05  1.50  4.00  0.50 30.00
+No  2 : 0.401D+01 0.801D+00  0.50  0.92  0.05  1.50  4.00  0.50 30.00
+No  3 : 0.431D+01 0.675D+00  0.50  0.92  0.05  1.50  4.00  0.50 30.00
+
+ Lateral Boundary Conditions: NLM
+ ============================
+
+ Variable               Grid  West Edge    South Edge   East Edge    North Edge
+ ---------              ----  ----------   ----------   ----------   ----------
+
+ zeta                     1   Clamped      Closed       Clamped      Closed
+
+ ubar                     1   Clamped      Closed       Reduced      Closed
+
+ vbar                     1   Clamped      Closed       Reduced      Closed
+
+ u                        1   Radiation    Closed       Radiation    Closed
+
+ v                        1   Radiation    Closed       Radiation    Closed
+
+ temp                     1   Radiation    Closed       Radiation    Closed
+
+ salt                     1   Radiation    Closed       Radiation    Closed
+
+ tke                      1   Gradient     Closed       Radiation    Closed
+
+ Activated C-preprocessing Options:
+
+ VALIDATION          Simplified Channel
+ ANA_BTFLUX          Analytical kinematic bottom temperature flux.
+ ANA_FSOBC           Analytical free-surface boundary conditions.
+ ANA_GRID            Analytical grid set-up.
+ ANA_INITIAL         Analytical initial conditions.
+ ANA_M2OBC           Analytical 2D momentum boundary conditions.
+ ANA_M3OBC           Analytical 3D momentum boundary conditions.
+ ANA_SMFLUX          Analytical kinematic surface momentum flux.
+ ANA_STFLUX          Analytical kinematic surface temperature flux.
+ ASSUMED_SHAPE       Using assumed-shape arrays.
+ AVERAGES            Writing out time-averaged nonlinear model fields.
+ TIDAL_TURBINE       tidal turbine hydrodynamic effects as body-force and turbulence source.
+ I_ORIENTATION       tidal turbine facing the I direction.
+ CANUTO_B            Canuto B-stability function formulation.
+ DOUBLE_PRECISION    Double precision arithmetic.
+ GLS_MIXING          Generic Length-Scale turbulence closure.
+ MIX_S_UV            Mixing of momentum along constant S-surfaces.
+ MPI                 MPI distributed-memory configuration.
+ NONLINEAR           Nonlinear Model.
+ !NONLIN_EOS         Linear Equation of State for seawater.
+ PERFECT_RESTART     Processing perfect restart variables.
+ POWER_LAW           Power-law shape time-averaging barotropic filter.
+ PRSGRD31            Standard density Jacobian formulation (Song, 1998).
+ PROFILE             Time profiling activated .
+ K_GSCHEME           Third-order upstream advection of TKE fields.
+ RADIATION_2D        Use tangential phase speed in radiation conditions.
+ RHO_SURF            Include difference between rho0 and surface density.
+ !RST_SINGLE         Double precision fields in restart NetCDF file.
+ SOLVE3D             Solving 3D Primitive Equations.
+ TS_C4HADVECTION     Fourth-order centered horizontal advection of tracers.
+ TS_C4VADVECTION     Fourth-order centered vertical advection of tracers.
+ UV_ADV              Advection of momentum.
+ UV_U3HADVECTION     Third-order upstream horizontal advection of 3D momentum.
+ UV_C4VADVECTION     Fourth-order centered vertical advection of momentum.
+ UV_LOGDRAG          Logarithmic bottom stress.
+ UV_VIS2             Harmonic mixing of momentum.
+ VAR_RHO_2D          Variable density barotropic mode.
+
+ Process Information:
+
+ Node #  1 (pid=    5939) is active.
+ Node #  2 (pid=    5940) is active.
+ Node #  3 (pid=    5941) is active.
+ Node #  4 (pid=    5942) is active.
+ Node #  5 (pid=    5943) is active.
+ Node #  6 (pid=    5944) is active.
+ Node #  7 (pid=    5945) is active.
+ Node #  8 (pid=    5946) is active.
+ Node #  9 (pid=    5947) is active.
+ Node # 10 (pid=    5948) is active.
+ Node # 11 (pid=    5949) is active.
+ Node # 12 (pid=    5950) is active.
+ Node # 13 (pid=    5951) is active.
+ Node # 14 (pid=    5952) is active.
+ Node # 15 (pid=    5953) is active.
+ Node # 16 (pid=    5954) is active.
+ Node # 17 (pid=    5955) is active.
+ Node # 18 (pid=    5956) is active.
+ Node # 19 (pid=    5957) is active.
+ Node # 20 (pid=    5958) is active.
+ Node # 21 (pid=    5959) is active.
+ Node # 22 (pid=    5960) is active.
+ Node # 23 (pid=    5961) is active.
+ Node #  0 (pid=    5938) is active.
+
+ INITIAL: Configuring and initializing forward nonlinear model ...
+ *******
+
+ Vertical S-coordinate System, Grid 01:
+
+ level   S-coord     Cs-curve   Z   at hmin       at hc    half way     at hmax
+
+    40   0.0000000   0.0000000        0.000       0.000       0.000       0.000
+    39  -0.0250000  -0.0116821       -0.004      -0.000      -0.004      -0.004
+    38  -0.0500000  -0.0298123       -0.009      -0.000      -0.009      -0.009
+    37  -0.0750000  -0.0512639       -0.015      -0.000      -0.015      -0.015
+    36  -0.1000000  -0.0748774       -0.022      -0.000      -0.022      -0.022
+    35  -0.1250000  -0.0999581       -0.030      -0.000      -0.030      -0.030
+    34  -0.1500000  -0.1260325       -0.038      -0.000      -0.038      -0.038
+    33  -0.1750000  -0.1527582       -0.046      -0.000      -0.046      -0.046
+    32  -0.2000000  -0.1798801       -0.054      -0.000      -0.054      -0.054
+    31  -0.2250000  -0.2072055       -0.062      -0.000      -0.062      -0.062
+    30  -0.2500000  -0.2345894       -0.070      -0.000      -0.070      -0.070
+    29  -0.2750000  -0.2619234       -0.079      -0.000      -0.079      -0.079
+    28  -0.3000000  -0.2891297       -0.087      -0.000      -0.087      -0.087
+    27  -0.3250000  -0.3161563       -0.095      -0.000      -0.095      -0.095
+    26  -0.3500000  -0.3429732       -0.103      -0.000      -0.103      -0.103
+    25  -0.3750000  -0.3695705       -0.111      -0.000      -0.111      -0.111
+    24  -0.4000000  -0.3959554       -0.119      -0.000      -0.119      -0.119
+    23  -0.4250000  -0.4221506       -0.127      -0.000      -0.127      -0.127
+    22  -0.4500000  -0.4481916       -0.134      -0.000      -0.134      -0.134
+    21  -0.4750000  -0.4741239       -0.142      -0.000      -0.142      -0.142
+    20  -0.5000000  -0.5000000       -0.150      -0.000      -0.150      -0.150
+    19  -0.5250000  -0.5258761       -0.158      -0.000      -0.158      -0.158
+    18  -0.5500000  -0.5518084       -0.166      -0.000      -0.166      -0.166
+    17  -0.5750000  -0.5778494       -0.173      -0.000      -0.173      -0.173
+    16  -0.6000000  -0.6040446       -0.181      -0.000      -0.181      -0.181
+    15  -0.6250000  -0.6304295       -0.189      -0.000      -0.189      -0.189
+    14  -0.6500000  -0.6570268       -0.197      -0.000      -0.197      -0.197
+    13  -0.6750000  -0.6838437       -0.205      -0.000      -0.205      -0.205
+    12  -0.7000000  -0.7108703       -0.213      -0.000      -0.213      -0.213
+    11  -0.7250000  -0.7380766       -0.221      -0.000      -0.221      -0.221
+    10  -0.7500000  -0.7654106       -0.230      -0.000      -0.230      -0.230
+     9  -0.7750000  -0.7927945       -0.238      -0.000      -0.238      -0.238
+     8  -0.8000000  -0.8201199       -0.246      -0.000      -0.246      -0.246
+     7  -0.8250000  -0.8472418       -0.254      -0.000      -0.254      -0.254
+     6  -0.8500000  -0.8739675       -0.262      -0.000      -0.262      -0.262
+     5  -0.8750000  -0.9000419       -0.270      -0.000      -0.270      -0.270
+     4  -0.9000000  -0.9251226       -0.278      -0.000      -0.278      -0.278
+     3  -0.9250000  -0.9487361       -0.285      -0.000      -0.285      -0.285
+     2  -0.9500000  -0.9701877       -0.291      -0.000      -0.291      -0.291
+     1  -0.9750000  -0.9883179       -0.296      -0.000      -0.296      -0.296
+     0  -1.0000000  -1.0000000       -0.300      -0.000      -0.300      -0.300
+
+ Time Splitting Weights for Grid 01:    ndtfast =  30    nfast =  42
+ ==================================
+
+    Primary            Secondary            Accumulated to Current Step
+
+  1-0.0008094437383769 0.0333333333333333-0.0008094437383769 0.0333333333333333
+  2-0.0014053566728197 0.0333603147912792-0.0022148004111966 0.0666936481246126
+  3-0.0017877524645903 0.0334071600137066-0.0040025528757869 0.1001008081383191
+  4-0.0019566842408176 0.0334667517625262-0.0059592371166046 0.1335675599008453
+  5-0.0019122901320372 0.0335319745705535-0.0078715272486418 0.1670995344713988
+  6-0.0016548570247459 0.0335957175749547-0.0095263842733877 0.2006952520463536
+  7-0.0011849025289723 0.0336508794757796-0.0107112868023600 0.2343461315221331
+  8-0.0005032751608631 0.0336903762267453-0.0112145619632232 0.2680365077488784
+  9 0.0003887272597151 0.0337071520654408-0.0108258347035081 0.3017436598143192
+ 10 0.0014892209965583 0.0336941944901169-0.0093366137069498 0.3354378543044362
+ 11 0.0027955815694920 0.0336445537902317-0.0065410321374578 0.3690824080946679
+ 12 0.0043042707117221 0.0335513677379153-0.0022367614257356 0.4026337758325831
+ 13 0.0060106451121704 0.0334078920475245 0.0037738836864348 0.4360416678801076
+ 14 0.0079087469427945 0.0332075372104522 0.0116826306292293 0.4692492050905598
+ 15 0.0099910761708920 0.0329439123123590 0.0216737068001213 0.5021931174029188
+ 16 0.0122483446563884 0.0326108764399960 0.0339220514565097 0.5348039938429148
+ 17 0.0146692120341107 0.0322025982847830 0.0485912634906204 0.5670065921276978
+ 18 0.0172400033810439 0.0317136245503127 0.0658312668716643 0.5987202166780105
+ 19 0.0199444086685725 0.0311389577709445 0.0857756755402368 0.6298591744489550
+ 20 0.0227631639997064 0.0304741441486588 0.1085388395399432 0.6603333185976138
+ 21 0.0256737146312911 0.0297153720153352 0.1342125541712342 0.6900486906129490
+ 22 0.0286498597812016 0.0288595815276255 0.1628624139524359 0.7189082721405746
+ 23 0.0316613792205220 0.0279045862015855 0.1945237931729578 0.7468128583421600
+ 24 0.0346736416507075 0.0268492068942347 0.2291974348236653 0.7736620652363948
+ 25 0.0376471948657328 0.0256934188392112 0.2668446296893981 0.7993554840756060
+ 26 0.0405373376992232 0.0244385123436867 0.3073819673886213 0.8237939964192927
+ 27 0.0432936737565710 0.0230872677537126 0.3506756411451924 0.8468812641730054
+ 28 0.0458596469320356 0.0216441452951603 0.3965352880772280 0.8685254094681656
+ 29 0.0481720587108284 0.0201154903974257 0.4447073467880565 0.8886408998655914
+ 30 0.0501605672561820 0.0185097551070648 0.4948679140442384 0.9071506549726561
+ 31 0.0517471682814030 0.0168377361985254 0.5466150823256415 0.9239883911711815
+ 32 0.0528456577069106 0.0151128305891453 0.5994607400325521 0.9391012217603267
+ 33 0.0533610761022577 0.0133513086655816 0.6528218161348098 0.9524525304259084
+ 34 0.0531891349131379 0.0115726061288397 0.7060109510479478 0.9640251365547481
+ 35 0.0522156244733761 0.0097996349650684 0.7582265755213239 0.9738247715198165
+ 36 0.0503158038019030 0.0080591141492892 0.8085423793232269 0.9818838856691057
+ 37 0.0473537721847153 0.0063819206892258 0.8558961515079423 0.9882658063583315
+ 38 0.0431818225418188 0.0048034616164019 0.8990779740497611 0.9930692679747334
+ 39 0.0376397765791564 0.0033640675316746 0.9367177506289175 0.9964333355064080
+ 40 0.0305543017255206 0.0021094083123694 0.9672720523544381 0.9985427438187774
+ 41 0.0217382098544504 0.0010909315881854 0.9890102622088885 0.9996336754069628
+ 42 0.0109897377911118 0.0003663245930371 1.0000000000000004 0.9999999999999999
+
+ ndtfast, nfast =   30  42   nfast/ndtfast =  1.40000
+
+ Centers of gravity and integrals (values must be 1, 1, approx 1/2, 1, 1):
+
+    1.000000000000 1.047601458608 0.523800729304 1.000000000000 1.000000000000
+
+ Power filter parameters, Fgamma, gamma =  0.28400   0.18933
+
+ Metrics information for Grid 01:
+ ===============================
+
+ Minimum X-grid spacing, DXmin =  4.76190476E-05 km
+ Maximum X-grid spacing, DXmax =  4.76190476E-05 km
+ Minimum Y-grid spacing, DYmin =  1.48351648E-05 km
+ Maximum Y-grid spacing, DYmax =  1.48351648E-05 km
+ Minimum Z-grid spacing, DZmin =  3.50462374E-03 m
+ Maximum Z-grid spacing, DZmax =  8.21514706E-03 m
+
+ Minimum barotropic Courant Number =  4.03734573E-02
+ Maximum barotropic Courant Number =  4.03734573E-02
+ Maximum Coriolis   Courant Number =  0.00000000E+00
+
+
+ NLM: GET_STATE - Read state initial conditions,             t =     0 00:06:39
+                   (Grid 01, File: ocean_kick_starter.nc, Rec=0001, Index=1)
+                - free-surface
+                   (Min = -3.49163042E-04 Max =  1.25171755E-02)
+                - RHS of free-surface equation
+                   (Min =  0.00000000E+00 Max =  4.16852911E-08)
+                - vertically integrated u-momentum component
+                   (Min = -8.71032543E-02 Max =  3.17759632E-01)
+                - RHS of vertically integrated u-momentum
+                   (Min = -8.22517254E-08 Max =  1.77332131E-07)
+                - vertically integrated v-momentum component
+                   (Min = -6.15374654E-02 Max =  6.15208080E-02)
+                - RHS of vertically integrated v-momentum
+                   (Min = -6.36510758E-08 Max =  3.97450919E-08)
+                - u-momentum component
+                   (Min = -8.78441967E-02 Max =  3.31524085E-01)
+                - RHS of total u-momentum
+                   (Min = -1.46379233E-04 Max =  3.71850202E-05)
+                - v-momentum component
+                   (Min = -7.88466301E-02 Max =  8.30007300E-02)
+                - RHS of total v-momentum
+                   (Min = -1.14921462E-05 Max =  1.21012526E-05)
+                - potential temperature
+                   (Min =  1.86206390E+01 Max =  2.07818953E+01)
+                - salinity
+                   (Min =  3.24688827E+01 Max =  3.64685430E+01)
+                - vertical viscosity coefficient
+                   (Min =  0.00000000E+00 Max =  4.14265132E-01)
+                - temperature vertical diffusion coefficient
+                   (Min =  0.00000000E+00 Max =  6.69726507E-01)
+                - turbulent kinetic energy
+                   (Min =  3.00000000E-06 Max =  9.39063735E-03)
+                - turbulent generic length scale
+                   (Min =  1.00000000E-12 Max =  1.82441479E+02)
+                - vertical mixing turbulent length scale
+                   (Min =  0.00000000E+00 Max =  3.62095074E+01)
+                - Turbulent kinetic energy vertical diffusion coefficient
+                   (Min =  0.00000000E+00 Max =  4.14260132E-01)
+                - Turbulent length scale vertical diffusion coefficient
+                   (Min =  0.00000000E+00 Max =  3.18662794E-01)
+
+ Basin information for Grid 01:
+
+ Maximum grid stiffness ratios:  rx0 =   0.000000E+00 (Beckmann and Haidvogel)
+                                 rx1 =   5.102994E-15 (Haney)
+
+ Initial basin volumes: TotVolume =  8.1000000000E+00 m3
+                        MinVolume =  2.4757938536E-06 m3
+                        MaxVolume =  5.8034790869E-06 m3
+                          Max/Min =  2.3440881713E+00
+
+ NL ROMS/TOMS: started time-stepping: (Grid: 01 TimeSteps: 00040001 - 00041000)
+
+
+   STEP   Day HH:MM:SS  KINETIC_ENRG   POTEN_ENRG    TOTAL_ENRG    NET_VOLUME
+          C => (i,j,k)       Cu            Cv            Cw         Max Speed
+
+  40000     0 00:06:39  2.919285E-02  1.483128E+00  1.512321E+00  8.162683E+00
+           (002,82,40)  5.867771E-02  5.190188E-02  0.000000E+00  3.301122E-01
+      DEF_HIS   - creating history file, Grid 01: ocean_validation_his.nc
+24 total processes killed (some possibly by mpirun during cleanup)
