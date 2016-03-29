@@ -79,7 +79,7 @@ The following recommendations will help enjoying the ROMS-Tidal Array experience
 ### Acknowledgement ###
 * ROMS/TOMS group  for their amazing work on the ROMS model (see www.myroms.org)
 * IT Power Consulting Ltd for supporting and financing this project (see www.itpower.co.uk)
-* Electric Brain for administrating and mainting this repository/group ( see electricbrain.fr)
+* Electric Brain for administrating and mainting this repository/group ( see www.electricbrain.fr)
 * Special acknowledgement for the contributions of [Alice Jane Goward Brown](https://www.bangor.ac.uk/oceansciences/staff/phd-students/alice-goward-brown) and [Elizabeth Brasseale](http://www.ocean.washington.edu/home/Elizabeth+Brasseale)
 
 ### Legal Information ###
