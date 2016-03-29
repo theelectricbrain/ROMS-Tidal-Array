@@ -36,6 +36,7 @@ Three new CPP options have been added to the code and work as follows:
 * I_ORIENTATION: makes all the tidal turbine rotors facing the I-direction of the grid
   (i.e. default orientation).
 * J_ORIENTATION: makes all the tidal turbine rotors facing the J-direction of the grid
+
 ##### Input File
 A new input file has been created in order to facilitate the use of this new
 functionality. The input file (see “turbine_validation.in” in ROMS-Tidal-Array/cases/validation/) is composed of three main fields, “Lturbines”, “NTURBINES” and “POS”.
