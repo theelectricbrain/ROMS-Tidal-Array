@@ -76,10 +76,6 @@ The following recommendations will help enjoying the ROMS-Tidal Array experience
 * Successively run test case provided in “~/ROMS-Tidal Array/cases/validation/” and compare the so-generated history output file with “ocean_validation_his.nc”
 * Once you have reached this point, you should be able to develop your own scenarios yet remember to make (x, y) turbine hub coordinates with rho-point coordinates and note that experience has shown that the horizontal spatial resolution should not exceed a 1/3 of the diameter along the turbine rotor and 1 diameter across the turbine rotor1.
 
-### References ###
-1. Roc et al. 2013. "Methodology for tidal turbine representation in ocean circulation". Renewable Energy, Volume 51, pg. 448-464
-2. Roc et al. 2014: "Tidal turbine representation in an ocean circulation model: Towards realistc applications". Ocean Engineering, Volume 78, pg. 95-111
-
 ### Acknowledgement ###
 * ROMS/TOMS group  for their amazing work on the ROMS model (see www.myroms.org)
 * IT Power Consulting Ltd for supporting and financing this project (see www.itpower.co.uk)
@@ -89,3 +85,8 @@ The following recommendations will help enjoying the ROMS-Tidal Array experience
 ### Legal Information ###
 * ROMS core code: Copyright (c) 2002-2016 The ROMS/TOMS Group, MIT/X License (See http://www.opensource.org/licenses/mit-license.php)
 * ROMS tidal array module: Copyright (c) 2016 Thomas Roc and ITPower, Licensed under an Affero GPL style license v3.0 (see License_ROMS-Tidal Array.txt)
+ 
+
+### References ###
+1. Roc et al. 2013. "Methodology for tidal turbine representation in ocean circulation". Renewable Energy, Volume 51, pg. 448-464
+2. Roc et al. 2014: "Tidal turbine representation in an ocean circulation model: Towards realistc applications". Ocean Engineering, Volume 78, pg. 95-111
