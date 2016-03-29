@@ -25,29 +25,6 @@ ROMS-Tidal-Array
   salt – various turbulence closure sub-models are available for turbulent mixing. Note 
   that ROMS version 3.6 is used in the current distribution of ROMS-Tidal Array.
 
-#### Module Description:
-##### CPP Options
-Three new CPP options have been added to the code and work as follows:
-* TIDAL_TURBINE: switches on the tidal array computation. Note that the positions and
-  features of the tidal turbines composing the array have to be specified in the
-  “turbine input file”.
-* I_ORIENTATION: makes all the tidal turbine rotors facing the I-direction of the grid
-  (i.e. default orientation).
-* J_ORIENTATION: makes all the tidal turbine rotors facing the J-direction of the grid
-##### Input File
-A new input file has been created in order to facilitate the use of this new
-functionality. The input file (see “turbine_validation.in” in ROMS-Tidal-Array/cases/validation/) is composed of three main fields, “Lturbines”, “NTURBINES” and “POS”.
-* “Lturbines” is a list of Boolean values (i.e. “T” or “F”) of “Ngrids” (i.e. number of nested and/or connected grid) element which switches the computation of turbine effects within nested and/or multiple connected grids. “T” would switch it on, “F” would switch it off.
-* “NTURBINES” is a list of integer values of “Ngrids” (i.e. number of nested and/or connected grid) element which defines the number of turbines to account within nested and/or multiple connected grids.
-* “POS” is composed of multiple lists, one of each turbine composing the array and one list per line. Each list/line is composed of 1 integer value (i.e. G) and 9 float values (i.e. xpos, ypos, zpos, Ct, Ctke, Cgls, Lc, Pa and Diam) defining the following turbines charcteristics:
-  free-surface, terrain-following numerical models that solve the Reynolds-averaged
-  Navier–Stokes equations using the hydrostatic and Boussinesq assumptions. In addition
-  to the underlying hydro-dynamical engine – responsible for determining sea level height
-  , and the three-dimensional circulation and transport of momentum, temperature and 
-  salt – various turbulence closure sub-models are available for turbulent mixing. Note 
-  that ROMS version 3.6 is used in the current distribution of ROMS-Tidal Array.
-
-#### Module Description:
 ##### CPP Options
 Three new CPP options have been added to the code and work as follows:
 * TIDAL_TURBINE: switches on the tidal array computation. Note that the positions and
