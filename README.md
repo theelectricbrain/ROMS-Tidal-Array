@@ -25,6 +25,7 @@ ROMS-Tidal-Array
   salt – various turbulence closure sub-models are available for turbulent mixing. Note 
   that ROMS version 3.6 is used in the current distribution of ROMS-Tidal Array.
 
+### Module Description ###
 ##### CPP Options
 Three new CPP options have been added to the code and work as follows:
 * TIDAL_TURBINE: switches on the tidal array computation. Note that the positions and
@@ -58,14 +59,14 @@ functionality. The input file (see “turbine_validation.in” in ROMS-Tidal-Arr
 * “Draggls”: turbine induced GLS correction (m3.s-2)
 Note that the tidal array module is compatible with the ROMS distributed-memory parallelism using OpenMPI libraries, besides the turbulence correction implementation is compatible with all the variations permitted by the GLS closure model (i.e. k-kl, k-ε, k-ω and k-generic).
 
-### Version limitations:
+### Version limitations ###
 Version 0.9 of ROMS-Tidal Array has several known limitations:
 * The tidal array functionality has been tested against all combination of options/couplings available in ROMS(please provide feedback, error log, ...)
 * The current distribution is based on old version of ROMS and may therefore have possible compatibility problems with newer version of ROMS
 * At this stage of development, modelled turbines work both ways with fixed directions and positions conditioned by the model grid.
 * The formulations and coefficients of the turbine related terms are partially based on empirical tuning with publicly available database and therefore may require custom modifications as well as further improvements as validation data becomes more and more available.
 
-### Best practises:
+### Best practises ###
 The following recommendations will help enjoying the ROMS-Tidal Array experience to the fullest. The learning curve is steep but worthwhile.
 * First of all, join the [ROMS/TOMS group](https://www.myroms.org/index.php?page=login). Their community forum will quickly become your best ally when inevitably battling with unknown error messages. Do not forget to acknowledge their amazing work when [disseminating your work](https://www.myroms.org/index.php?page=License_ROMS) and try as much as possible to actively participate to the community effort.
 * Successively set-up, run and validate the “upwelling” test case provide by ROMS web site before to try out the “TIDAL_TURBINE” functionality.
