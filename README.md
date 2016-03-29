@@ -4,10 +4,12 @@ ROMS-Tidal-Array
 * This project is under development and subject to changes.
 * It is a beta version and still suffers multiple bugs.
 * It has been developed around an old version of ROMS (i.e. 3.6).
-
+* The turbine representation module is scattered over the following files:
+  - ROMS/Nonlinear/gls_corstep.F , rhs3d.F, initial.F and pre_step3d.F
+  - ROMS/Include/globaldefs.h, cppdefs.h, mod_param.F, mod_ncparam.F, mod_scalars.F, mod_grid.F and mod_ocean.F
+  - ROMS/Utility/wrt_his.F, checkdefs.F, inp_par.F, read_phypar.F, def_his.F, read_trbpar.F, def_info.F and set_masks.F 
 
 ### Project description ###
-#### Background:
 * The tidal array representation method implemented in this modelling tool is based on a
   tidal turbine parameterisation method, accounting for the momentum capture as well as
   the sub-grid scale turbulence balance perturbations for each individual device.
@@ -23,7 +25,7 @@ ROMS-Tidal-Array
   to the underlying hydro-dynamical engine – responsible for determining sea level height
   , and the three-dimensional circulation and transport of momentum, temperature and 
   salt – various turbulence closure sub-models are available for turbulent mixing. Note 
-  that ROMS version 3.6 is used in the current distribution of ROMS-Tidal Array.
+  that ROMS version 3.8 is used in the current distribution of ROMS-Tidal Array.
 
 ### Module Description ###
 ##### CPP Options
